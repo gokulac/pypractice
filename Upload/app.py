@@ -11,10 +11,10 @@ def uploader_file():
    if request.method == 'POST':
       f = request.files['file']
       f.save(secure_filename(f.filename))
-      a = open(f.filename)
-      b = a.readlines()
-      c = len(b)
-      return str(c)
+      open_file = open(f.filename)
+      read_lines = open_file.readlines()
+      find_length = len(read_lines)
+      return str(find_length)
 		
 if __name__ == '__main__':
    app.run(debug = True)
