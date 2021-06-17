@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import csv
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -27,8 +27,8 @@ def plot():
     # plt.grid()
     # plt.legend()
     # final_output = plt.show()
-
-    return plt.show()
+    plt.savefig('static/image.jpg')
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
