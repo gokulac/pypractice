@@ -20,7 +20,7 @@ def plot():
     plt.plot(x, y, color = 'g', linestyle = 'dashed',
             marker = 'o',label = "Stock Returns")
 
-    plt.xticks(rotation = 25)
+    plt.xticks(rotation = 20)
     plt.xlabel('Dates')
     plt.ylabel('Returns')
     plt.title('SWAT Fin Exp', fontsize = 20)
